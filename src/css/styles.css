@@ -3,21 +3,40 @@ COLORS:
 Light green: #7ed56f
 Medium green: #55c57a
 Dark green: #28b485
+
+rem only for IE9 and newer
 */
 
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; /* 10px/16px=0.625 */
+}
+
+html, body {
+    /* overflow-x:hidden; */
 }
 
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.7;
     color:  #777;
-    padding: 30px;
+    padding: 3rem;
+    box-sizing: border-box;
+    /*
+     this (box-sizing: border-box;) must be here (in body tag) and +
+     * {
+        box-sizing: inherit;
+    } this will make all the elements to inherit this property!!!!
+    */
 }
 
 /* transition only after page load http://css-tricks.com/transitions-only-after-page-load/ */
@@ -44,21 +63,22 @@ body.preload * {
     background-size: cover;
     background-position: top;
     position: relative;
+    overflow-x: hidden;
 
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
-.logo-box {
+.header__logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
-.logo {
-    height: 35px;
+.header__logo {
+    height: 3.5rem;
 }
 
-.text-box {
+.header__text-box {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -71,24 +91,24 @@ body.preload * {
     color: #fff;
     text-transform: uppercase;
     backface-visibility: hidden;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 }
 
-.heading-primary-main {
+.heading-primary--main {
     display: block;
-    font-size: 70px;
+    font-size: 7rem;
     font-weight: 700;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
 
     animation-name: moveInLeft;
     animation-duration: 2s;
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 400;
-    letter-spacing: 15px;
+    letter-spacing: 1.5rem;
 
     animation-name: moveInRight;
     animation-duration: 2s;
@@ -100,11 +120,11 @@ body.preload * {
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
 
     80% {
-        transform: translateX(20px);
+        transform: translateX(2rem);
     }
 
     100% {
@@ -116,11 +136,11 @@ body.preload * {
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
 
     80% {
-        transform: translateX(-20px);
+        transform: translateX(-2rem);
     }
 
     100% {
@@ -148,21 +168,21 @@ body.preload * {
 .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     display: inline-block;
-    border-radius: 100px;
+    border-radius: 10rem;
     transition: all .2s;
     position: relative;
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
 }
 
 .btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .2);
 }
 
 .btn::after {
@@ -170,7 +190,7 @@ body.preload * {
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -183,16 +203,16 @@ body.preload * {
     opacity: 0;
 }
 
-.btn-white {
+.btn--white {
     background-color: #fff;
     color: #777;
 }
 
-.btn.btn-white.btn-animated {
+.btn.btn--white.btn--animated {
     animation: moveFromBottomToTop .9s ease-in .75s forwards;
     animation-fill-mode: backwards;
 }
 
-.btn-white::after {
+.btn--white::after {
     background-color: #fff;
 }
