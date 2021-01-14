@@ -20,8 +20,16 @@ body {
     padding: 30px;
 }
 
+/* transition only after page load http://css-tricks.com/transitions-only-after-page-load/ */
+body.preload * {
+ -webkit-transition: none !important;
+ -moz-transition: none !important;
+ -ms-transition: none !important;
+ -o-transition: none !important;
+}
+
 .header {
-    height: 95vh;
+    height: 90vh;
     background-image: linear-gradient(
         to right bottom,
         rgba(142, 111, 213, 0.8),
@@ -63,6 +71,7 @@ body {
     color: #fff;
     text-transform: uppercase;
     backface-visibility: hidden;
+    margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -118,4 +127,72 @@ body {
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+@keyframes moveFromBottomToTop {
+    0% {
+        opacity: 0;
+        transform: translateY(12vh) translateX(-10vw);
+    }
+    60% {
+        opacity: 0;
+        transform: translateY(10vh) translateX(-5vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) translateX(0);
+    }
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.7);
+    opacity: 0;
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn.btn-white.btn-animated {
+    animation: moveFromBottomToTop .9s ease-in .75s forwards;
+    animation-fill-mode: backwards;
+}
+
+.btn-white::after {
+    background-color: #fff;
 }
