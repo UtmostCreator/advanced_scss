@@ -1,0 +1,33 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; /* 10px/16px=0.625 */
+}
+
+html, body {
+    /* overflow-x:hidden; */
+}
+
+body {
+    box-sizing: border-box;
+    /*
+     this (box-sizing: border-box;) must be here (in body tag) and +
+     * {
+        box-sizing: inherit;
+    } this will make all the elements to inherit this property!!!!
+    */
+}
+
+/* transition only after page load http://css-tricks.com/transitions-only-after-page-load/ */
+body.preload * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+}

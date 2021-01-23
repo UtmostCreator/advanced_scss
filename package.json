@@ -1,0 +1,18 @@
+{
+  "name": "adv_css",
+  "version": "1.0.0",
+  "description": "landing page for people",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass:min": "node-sass sass/main.scss src/css/styles.min.css --output-style compressed",
+    "compile:sass:exp": "node-sass -w sass/main.scss src/css/styles.css --output-style expanded"
+  },
+  "author": "Roman <email@email.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "debug": "^4.3.1",
+    "node-sass": "^5.0.0",
+    "sass": "^1.32.5"
+  },
+  "dependencies": {}
+}
