@@ -1,0 +1,177 @@
+.tour {
+    perspective: 50rem;
+    -moz-perspective: 50rem;
+    position: relative;
+    height: 50rem; // for card placeholder
+
+    &__side {
+        height: 50rem; // for both sides of card
+        overflow: hidden;
+        transition: all .8s ease;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-dark, .5);
+
+        &--front {
+            background-color: $color-white;
+        }
+
+        &--back {
+            background-color: $color-primary-dark;
+            transform: rotateY(180deg);
+
+            &-1 {
+                background-image: linear-gradient(
+                    to right bottom,
+                    $color-secondary-light,
+                    $color-secondary-dark
+                );
+            }
+
+            &-2 {
+                background-image: linear-gradient(
+                    to right bottom,
+                    $color-tertiary-light,
+                    $color-tertiary-dark
+                );
+            }
+
+            &-3 {
+                background-image: linear-gradient(
+                    to right bottom,
+                    $color-grey-light-1,
+                    $color-grey-dark
+                );
+            }
+        }
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+
+    &__picture {
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: multiply;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+
+        &--1 {
+            background-image: linear-gradient(
+                to right bottom,
+                $color-secondary-light,
+                $color-secondary-dark
+            ), url(../../src/images/tour-1.jpg);
+        }
+
+        &--2 {
+            background-image: linear-gradient(
+                to right bottom,
+                $color-tertiary-light,
+                $color-tertiary-dark
+            ), url(../../src/images/tour-2.jpg);
+        }
+
+        &--3 {
+            background-image: linear-gradient(
+                to right bottom,
+                $color-grey-light-1,
+                $color-grey-dark
+            ), url(../../src/images/tour-3.jfif);
+        }
+    }
+
+    &__heading {
+        color: $color-white;
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        position: absolute;
+        text-align: right;
+        top: 12rem;
+        right: 2rem;
+        width: 55%;
+    }
+
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+
+        &--1 {
+            background-image: linear-gradient(to right bottom,
+            rgba($color-primary-light, .85),
+            rgba($color-secondary-dark, .85));
+        }
+
+        &--2 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-tertiary-light, .85),
+                rgba($color-tertiary-dark, .85));
+        }
+
+        &--3 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-grey-light-1, .85),
+                rgba($color-grey-dark, .85));
+        }
+    }
+
+    &__details {
+        padding: 3rem;
+
+        ul {
+            list-style: none;
+            width: 80%;
+            font-size: 1.5rem;
+            color: $color-dark;
+            margin: 0 auto;
+
+            li {
+                text-align: center;
+                padding: .8rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color-grey-dark;
+                }
+            }
+        }
+    }
+
+    &__information {
+        text-align: center;
+        margin-top: 30%;
+        color: white;
+
+        &--price-info {
+            text-transform: uppercase;
+            font-size: 2rem;
+            font-weight: 500;
+            display: block;
+        }
+
+        &--price-value {
+            font-size: 7rem;
+            font-weight: 400;
+            display: block;
+
+            &:before {
+                content: "\0024";
+            }
+        }
+    }
+}

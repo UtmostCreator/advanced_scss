@@ -5,14 +5,24 @@
   "main": "index.js",
   "scripts": {
     "compile:sass:min": "node-sass sass/main.scss src/css/styles.min.css --output-style compressed",
-    "compile:sass:exp": "node-sass -w sass/main.scss src/css/styles.css --output-style expanded"
+    "compile:sass:exp": "node-sass -w sass/main.scss src/css/styles.css --output-style expanded",
+    "scss": "node-sass-chokidar -w sass/main.scss src/css/styles.css --output-style expanded",
+    "serve": "live-server --port=8080",
+    "start1": "concurrently \"npm run scss && npm run scss -- -w\" \"npm run serve\"",
+    "sass:watch": "node-sass -w sass/main.scss src/css/styles.css --output-style expanded",
+    "livereload": "live-server --port=8080",
+    "start": "npm-run-all --parallel sass:watch livereload",
+    "start:onlyUNIXLIKEsystems": "npm run sass:watch & npm run livereload"
   },
   "author": "Roman <email@email.com>",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^5.3.0",
     "debug": "^4.3.1",
     "node-sass": "^5.0.0",
-    "sass": "^1.32.5"
+    "node-sass-chokidar": "^1.5.0",
+    "npm-run-all": "^4.1.5",
+    "parallelshell": "^3.0.1"
   },
   "dependencies": {}
 }

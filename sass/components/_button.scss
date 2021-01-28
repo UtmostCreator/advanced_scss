@@ -1,3 +1,4 @@
+.btn[type="submit"],
 .btn:link,
 .btn:visited {
     text-transform: uppercase;
@@ -7,6 +8,9 @@
     border-radius: 10rem;
     transition: all .2s;
     position: relative;
+
+    cursor: pointer;
+    border: none;
 }
 
 .btn {
@@ -20,7 +24,7 @@
         }
     }
 
-    &:active {
+    &:active, &:focus {
         transform: translateY(-.1rem);
         box-shadow: 0 .5rem .5rem $color-dark;
     }
@@ -50,6 +54,11 @@
         &::after {
             background-color: $color-white;
         }
+    }
+
+    &--primary {
+        background-color: $color-primary-dark;
+        color: $color-white;
     }
 }
 
