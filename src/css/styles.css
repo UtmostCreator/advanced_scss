@@ -647,7 +647,6 @@ body {
 }
 
 .row {
-  background-color: rgba(198, 180, 248, 0.3);
   max-width: 114rem;
   margin: 0 auto;
 }
@@ -663,7 +662,6 @@ body {
 }
 
 .row [class^="col-"] {
-  background-color: springgreen;
   float: left;
 }
 
@@ -673,7 +671,6 @@ body {
 
 .row .col-1-of-2 {
   width: calc((100% - 6rem) / 2);
-  background-color: orange;
 }
 
 .row .col-1-of-3 {
@@ -827,8 +824,6 @@ body {
 
 .footer__copyright {
   border-top: 1px solid #f3f3f3;
-}
-
-.footer__copyright-text {
+  padding-top: 2rem;
   text-align: center;
 }
