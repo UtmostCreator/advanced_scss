@@ -1,15 +1,21 @@
+let removePreloadClass = () => {
+    document.body.classList.remove('preload')
+}
+
 function docReady(fn) {
     // see if DOM is already available
     if (document.readyState === "complete" || document.readyState === "interactive") {
         // call on next available tick
         setTimeout(fn, 1);
+        console.log('resources are loaded!');
     } else {
         document.addEventListener("DOMContentLoaded", fn);
     }
-    console.log('loaded');
+    if(document.readyState === "complete" || document.readyState === "interactive") {
+        console.log('resources are loaded!');
+    }
 }
 
-let body = document.querySelector('body');
-if(body) {
-    docReady(body.classList.remove('preload'));
-}
+docReady(removePreloadClass);
+    // docReady(console.log('text'));
+// window.onload = function(){document.body.classList.remove("preload");}
