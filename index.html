@@ -28,19 +28,19 @@
         <nav class="navigation__nav">
             <ul class="navigation__list">
                 <li class="navigation__item">
-                    <a href="" class="navigation__link"><span>01</span>About Hemerix</a>
+                    <a href="#section-about" class="navigation__link"><span>01</span>About Hemerix</a>
                 </li>
                 <li class="navigation__item">
-                    <a href="" class="navigation__link"><span>02</span>Your Benefits</a>
+                    <a href="#section-feature" class="navigation__link"><span>02</span>Your Benefits</a>
                 </li>
                 <li class="navigation__item">
-                    <a href="" class="navigation__link"><span>03</span>Popular tours</a>
+                    <a href="#section-tours" class="navigation__link"><span>03</span>Popular tours</a>
                 </li>
                 <li class="navigation__item">
-                    <a href="" class="navigation__link"><span>04</span>Stories</a>
+                    <a href="#section-stories" class="navigation__link"><span>04</span>Stories</a>
                 </li>
                 <li class="navigation__item">
-                    <a href="" class="navigation__link"><span>05</span>Book now</a>
+                    <a href="#section-book" class="navigation__link"><span>05</span>Book now</a>
                 </li>
             </ul>
         </nav>
@@ -64,7 +64,7 @@
     </header>
 
     <main>
-        <section class="section-about">
+        <section class="section-about" id="section-about">
 
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
@@ -107,7 +107,7 @@
             </div>
         </section>
 
-        <section class="section-feature">
+        <section class="section-feature" id="section-feature">
 
             <div class="row">
                 <div class="col-1-of-4">
@@ -153,7 +153,7 @@
             </div>
         </section>
 
-        <section class="section-tours">
+        <section class="section-tours" id="section-tours">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
                     Most popular tours
@@ -183,7 +183,7 @@
                             <div class="tour__information">
                                 <span class="tour__information--price-info u-margin-bottom-small">Only</span>
                                 <span class="tour__information--price-value u-margin-bottom-big">299</span>
-                                <a href="#" class="btn btn--white">Book Now!</a>
+                                <a href="#popup" class="btn btn--white">Book Now!</a>
                             </div>
                         </div>
                     </div>
@@ -211,7 +211,7 @@
                             <div class="tour__information">
                                 <span class="tour__information--price-info u-margin-bottom-small">Only</span>
                                 <span class="tour__information--price-value u-margin-bottom-big">500</span>
-                                <a href="#" class="btn btn--white">Book Now!</a>
+                                <a href="#popup" class="btn btn--white">Book Now!</a>
                             </div>
                         </div>
                     </div>
@@ -239,7 +239,7 @@
                             <div class="tour__information">
                                 <span class="tour__information--price-info u-margin-bottom-small">Only</span>
                                 <span class="tour__information--price-value u-margin-bottom-big">799</span>
-                                <a href="#" class="btn btn--white">Book Now!</a>
+                                <a href="#popup" class="btn btn--white">Book Now!</a>
                             </div>
                         </div>
                     </div>
@@ -251,7 +251,7 @@
             </div>
         </section>
 
-        <section class="section-stories">
+        <section class="section-stories" id="section-stories">
             <div class="bg-video">
                 <video class="bg-video__content" autoplay muted loop>
                     <source src="src/videos/video.mp4" type="video/mp4">
@@ -310,7 +310,7 @@
             </div>
         </section>
 
-        <section class="section-book">
+        <section class="section-book" id="section-book">
             <div class="row">
                 <div class="booking">
                     <div class="booking__form">
@@ -352,47 +352,66 @@
             </div>
         </section>
 
-        <footer class="footer">
-            <div class="footer__logo-box u-margin-bottom-big">
-                <img src="src/images/nature-logo.png" alt="Image logo" class="footer__logo">
-                <span class="footer__logo-text">Company Logo</span>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-2">
-                    <nav class="footer__navigation">
-                        <ul class="footer__list">
-                            <li class="footer__item">
-                                <a href="#" class="footer__link">Company</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="#" class="footer__link">Contact Us</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="#" class="footer__link">Careers</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="#" class="footer__link">Privacy Policy</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="#" class="footer__link">Terms</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <div class="col-1-of-2">
-                    <div class="footer__copyright">
-                        <p class="about__author-text">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptatem ea rem praesentium eaque laborum qui voluptatibus earum esse unde. Cum, sapiente quasi hic velit nisi magnam perspiciatis deleniti quis.
-                            Created by <a href="#" class="footer__link">UtmostCreator/MasterMind</a> Copyright &copy; by Roman Zakhriapa
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
     </main>
+
+    <footer class="footer">
+        <div class="footer__logo-box u-margin-bottom-big">
+            <img src="src/images/nature-logo.png" alt="Image logo" class="footer__logo">
+            <span class="footer__logo-text">Company Logo</span>
+        </div>
+
+        <div class="row">
+            <div class="col-1-of-2">
+                <nav class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Company</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Contact Us</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Careers</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Privacy Policy</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Terms</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="col-1-of-2">
+                <div class="footer__copyright">
+                    <p class="about__author-text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptatem ea rem praesentium eaque laborum qui voluptatibus earum esse unde. Cum, sapiente quasi hic velit nisi magnam perspiciatis deleniti quis.
+                        Created by <a href="#" class="footer__link">UtmostCreator/MasterMind</a> Copyright &copy; by Roman Zakhriapa
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="popup" id="popup">
+        <a href="#" class="popup__close-area"></a>
+        <div class="popup__content">
+                <div class="popup__images">
+                    <img src="src/images/nat-1.jpeg" alt="Image 1" class="popup__img">
+                    <img src="src/images/nat-3.jpeg" alt="Image 2" class="popup__img">
+                </div>
+                <div class="popup__description">
+                    <a href="#section-tours" class="popup__close">&times;</a>
+                    <h2 class="heading-secondary u-margin-top-medium u-margin-bottom-medium">Some text about tour 1</h2>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Some text about tour 2</h3>
+                    <p class="popup__text u-margin-bottom-medium">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, quidem? Vitae quaerat pariatur, dicta distinctio maxime officiis quos omnis natus temporibus alias quae voluptatibus ipsum assumenda, consequuntur veritatis. Soluta totam molestiae vero beatae aliquam nam ipsum repudiandae porro sed modi.
+                    </p>
+                    <a href="#" class="btn btn--primary">Book now</a>
+                </div>
+        </div>
+    </div>
 
     <!-- <sections class="grid-test">
         <div class="row">
