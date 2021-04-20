@@ -1,3 +1,18 @@
+/* MEDIA QUERY MANAGER */
+/*
+Desktop-firs approch
+0-600px:        Phone;
+600-900px:      Tablet portrait
+900-1200px:     Tablet landscape
+[1200-1800]:    Normal styles apply
+1800px +:       Big Desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -50,8 +65,39 @@
 }
 
 html {
+  /* DESIRED font-size=10px; DEFAULT agenda's font-size (browser's font-size=16px!!! */
   font-size: 62.5%;
-  /* 10px/16px=0.625 */
+  /* 1rem = 10px; 10px/16px=0.625 */
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 37.5%;
+  }
+}
+
+@media (min-width: 1800px) {
+  html {
+    font-size: 80%;
+  }
 }
 
 html,
